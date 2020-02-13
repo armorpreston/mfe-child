@@ -4,12 +4,12 @@ import { Injector, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
-import { NestComponent } from './nest/nest.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NestComponent
+    ChildComponent
   ],
   imports: [
     BrowserModule,
@@ -23,8 +23,8 @@ export class AppModule {
   ngDoBootstrap(): void {
     const { injector } = this;
     // create custom elements from angular components
-    const ngCustomElement = createCustomElement(AppComponent, { injector });
+    const ngCustomElement = createCustomElement(ChildComponent, { injector });
     // define in browser registry
-    customElements.define('kid-a', ngCustomElement);
+    customElements.define('mfe-child', ngCustomElement);
   }
 }

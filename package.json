@@ -1,9 +1,9 @@
 {
-  "name": "kid-a",
+  "name": "mfe-child",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --output-hashing none --single-bundle true",
+    "start": "ng serve --output-hashing none --single-bundle true  --port 4201",
     "build": "ng build --prod --output-hashing none --single-bundle true",
     "test": "ng test",
     "lint": "ng lint",

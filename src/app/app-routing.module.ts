@@ -1,12 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NestComponent } from './nest/nest.component';
 
-
-const routes: Routes = [{
-  path: 'kid-a/nest',
-  component: NestComponent
-}];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
