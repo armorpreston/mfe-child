@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
 import { ChildComponent } from './child/child.component';
+import { ChildPageComponent } from './child-page/child-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    ChildComponent,
+    ChildPageComponent
   ],
   imports: [
     BrowserModule,
@@ -26,5 +28,9 @@ export class AppModule {
     const ngCustomElement = createCustomElement(ChildComponent, { injector });
     // define in browser registry
     customElements.define('mfe-child', ngCustomElement);
+
+    const ngCustomElement2 = createCustomElement(ChildPageComponent, { injector });
+    // define in browser registry
+    customElements.define('mfe-child-page', ngCustomElement2);
   }
 }
